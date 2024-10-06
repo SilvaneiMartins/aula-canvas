@@ -1,50 +1,98 @@
-# Welcome to your Expo app 👋
+<h1 align="center">
+  Aula Canvas ChatGPT
+</h1>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<h3 align="center">
+  Login Screen - React Native
+</h3>
 
-## Get started
+## Informação do Projeto
 
-1. Install dependencies
+Este projeto é uma tela de login simples desenvolvida com React Native, utilizando TypeScript. Ele inclui validação de email, verificação da força da senha, além de feedback visual e interações para uma melhor experiência do usuário.
 
+## Funcionalidades
+
+- Validação de email para garantir que o formato seja válido.
+- Validação da força da senha, exigindo pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas e números.
+- Feedback visual em tempo real para entrada inválida de email.
+- Botão de login desativado até que todos os campos estejam preenchidos.
+- Mensagens de erro amigáveis para guiar o usuário em caso de dados faltantes ou inválidos.
+
+## Estrutura do Código
+
+### Principais Componentes e Funções
+
+- **LoginScreen**: Componente principal que renderiza a tela de login.
+- **Estados**:
+  - `email`, `password`, `emailError` - armazenam o valor do email, senha e mensagem de erro do email, respectivamente.
+- **Funções**:
+  - `handleLogin()`: Responsável por lidar com o fluxo de login, incluindo navegação para a próxima tela em caso de sucesso.
+  - `validateInputs()`: Realiza a validação dos campos de email e senha, garantindo que estejam corretos antes de prosseguir.
+  - `isValidEmail(email)`: Verifica se o email está no formato correto.
+  - `isValidPassword(password)`: Verifica se a senha atende aos critérios de segurança estabelecidos.
+
+### Melhorias Realizadas
+
+- **Separação de Responsabilidades**: A função `handleLogin` foi refatorada para separar a lógica de validação (`validateInputs`) da lógica de autenticação. Isso melhora a legibilidade e a manutenção do código.
+- **Sanitização do Input**: O email é sanitizado antes de ser exibido nos alertas para evitar possíveis problemas de segurança, como ataques de injeção.
+- **Estilo do Botão Desativado**: Foi implementado um estilo separado para o botão de login quando ele está desativado, melhorando a consistência visual e a manutenção do código.
+
+## Como Executar o Projeto
+
+1. **Pré-requisitos**:
+   - Node.js instalado.
+   - Ambiente de desenvolvimento React Native configurado (CLI ou Expo).
+
+2. **Instalar Dependências**:
    ```bash
    npm install
+   yarn
    ```
 
-2. Start the app
+3. **Executar o Projeto**:
+   - Para usuários do Expo:
+     ```bash
+     expo start
+     ```
+   - Para usuários do React Native CLI:
+     ```bash
+     npx react-native run-android ou ou run-ios
+     ```
 
-   ```bash
-    npx expo start
-   ```
+## Estrutura do Arquivo
 
-In the output, you'll find options to open the app in a
+- **`LoginScreen.tsx`**: Componente principal que contém a lógica de login e a interface do usuário.
+- **`styles`**: Estilização para os componentes da tela, incluindo cores e layouts.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Melhorias Futuras
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Integração com Backend**: Integrar com uma API para autenticar o usuário em um backend.
+- **Recuperação de Senha**: Adicionar funcionalidade para recuperar a senha.
+- **Tratamento de Erros**: Melhorar o tratamento de erros para lidar com falhas na comunicação com o servidor.
 
-## Get a fresh project
+## Contribuições
 
-When you're ready, run:
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar o projeto.
 
-```bash
-npm run reset-project
-```
+## Licença
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Este projeto é licenciado sob [CC0 1.0 Universal]. Consulte o arquivo [LICENSE](https://github.com/SilvaneiMartins/aula-canvas/blob/master/LICENSE) para obter detalhes.
 
-## Learn more
+## Informações do desenvolvedor
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<a href="https://github.com/SilvaneiMartins">
+    <img
+        style="border-radius:50%"
+        src="https://github.com/SilvaneiMartins.png"
+        width="100px;"
+        alt="Silvanei Martins"
+    />
+    <br />
+    <sub>
+        <b>Silvanei de Almeida Martins</b>
+    </sub>
+</a>
+     <a href="https://github.com/SilvaneiMartins" title="Silvanei martins" >
+ </a>
+<br />
+🚀 Feito com ❤️ por Silvanei Martins
